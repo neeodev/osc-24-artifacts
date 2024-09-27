@@ -1,7 +1,3 @@
-<!-- This todo list is a reminder of the object i need to do the fastest possible in 1 hour for the 24 hours stream of OSC -->
-<!-- The project is base on artifactsmmo.com which is a mmo rpg game with api for manupalation and all the task you can do in the game -->
-<!-- The objective is to add the more logic possible in the node project and watch our character do stuff after 1 hour -->
-
 - [ ] Create a new character
 - [ ] Get the character information
 - [ ] Get the character inventory
@@ -12,7 +8,7 @@
 - [ ] Get the character skills
 - [ ] Get the character quests
 - [ ] Get the character achievements
-- [ ] Make the character move to a specific location
+- [ ] Make the character move to a specific \*\*location
 - [ ] Make the character attack a specific target
   - [ ] Turn based combat system
     - [ ] Check if the character can fight the target
