@@ -1,0 +1,36 @@
+{
+  "name": "artifacts-mmo-osc",
+  "version": "1.0.0",
+  "description": "Projet de bot pour un jeux MMO en ligne basé sur une API REST (Pour les 24h de stream d'OSC)",
+  "main": "app.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neeodev/osc-24-artifacts.git"
+  },
+  "keywords": [
+    "artifactsmmo"
+  ],
+  "author": "neeodev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neeodev/osc-24-artifacts/issues"
+  },
+  "homepage": "https://github.com/neeodev/osc-24-artifacts#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/node": "^22.7.3",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
+  },
+  "dependencies": {
+    "artifacts-api-client": "^1.7.0"
+  }
+}
