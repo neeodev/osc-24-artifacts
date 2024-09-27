@@ -8,4 +8,12 @@ export class Attacker extends Character {
   ) {
     super(name, character);
   }
+
+  override async preRun() {
+    console.log(`Pre-running attacker : ${this.name}`);
+  }
+
+  override async run() {
+    console.log(`Running attacker : ${this.name}`);
+  }
 }

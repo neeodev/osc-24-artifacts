@@ -3,13 +3,18 @@ import { Attacker } from "./controllers/Attacker.ts";
 import { Character } from "./controllers/Character.ts";
 
 const envNames = process.env.CHARACTER_NAMES;
-const characterNames = envNames ? envNames.split(";") : [];
+const characterNames = envNames ? envNames.split(",") : [];
 const characters: Character[] = [];
 
 for (const name of characterNames) {
   const c = await Character.getOrCreateCharacter(artifactsApi, name);
 
-  characters.push(new Attacker(name, c));
+  const character = new Attacker(name, c);
+
+  characters.push(character);
 }
 
-console.log(characters);
+for (const character of characters) {
+  await character.preRun();
+  await character.run();
+}
