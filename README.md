@@ -91,6 +91,22 @@ cd artifacts-mmo-bot
 npm install
 ```
 
+4. Copy the `.sample.env` file to `.env` and fill in the required values:
+
+```
+cp .sample.env .env
+```
+
+<!-- ARTIFACTS_TOKEN=TOKEN
+CHARACTER_NAMES=NAMES
+ARTIFACTS_RUN=true -->
+
+> Required values:
+>
+> - `ARTIFACTS_TOKEN`: Your Artifacts MMO API token
+> - `CHARACTER_NAMES`: Semicolon-separated list of character names
+> - `ARTIFACTS_RUN`: Whether to run the bot (true/false) (if false, the bot will erase your characters from the game which is irreversible)
+
 ## Usage
 
 1. Start the bot:
