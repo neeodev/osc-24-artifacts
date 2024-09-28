@@ -28,7 +28,7 @@ export class Resource {
 
   getResourceByCode(code: string): components["schemas"]["ResourceSchema"];
   getResourceByCode(
-    ...codes: string[]
+    codes: string[]
   ): components["schemas"]["ResourceSchema"][];
   getResourceByCode(code: unknown) {
     if (typeof code === "string") {

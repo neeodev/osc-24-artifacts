@@ -10,10 +10,28 @@ export class Attacker extends Character {
   }
 
   override async preRun() {
-    console.log(`Pre-running attacker : ${this.name}`);
+    await this.map.getAllMaps();
+    await this.items.getAllItems();
+    await this.bank.getAllItems();
+    await this.monster.getAllMonsters();
+    await this.resource.getAllResources();
   }
 
   override async run() {
-    console.log(`Running attacker : ${this.name}`);
+    const action = await this.pickAction();
+
+    if(action){
+      await action;
+    }
+
+    await this.run();
+  }
+
+  protected async pickAction(): Promise<any>{
+    if (!this.character.task){
+      return this.acceptTask()
+    } else {
+      return this.move("chicken");
+    }
   }
 }

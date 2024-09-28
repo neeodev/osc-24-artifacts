@@ -27,7 +27,7 @@ export class Item {
   }
 
   getItemByCode(code: string): components["schemas"]["ItemSchema"];
-  getItemByCode(...codes: string[]): components["schemas"]["ItemSchema"][];
+  getItemByCode(codes: string[]): components["schemas"]["ItemSchema"][];
   getItemByCode(code: unknown) {
     if (typeof code === "string") {
       return this.items.find((item) => item.code === code);

@@ -10,14 +10,14 @@ export class Bank {
     const bankItems = (await this.api.myAccount.getBankItems()).data;
 
     const items = await new Item().getItemByCode(
-      ...bankItems.map((item) => item.code)
+      bankItems.map((item) => item.code)
     );
 
     return items;
   }
 
   async hasItem(code: string): Promise<boolean>;
-  async hasItem(...codes: string[]): Promise<boolean[]>;
+  async hasItem(codes: string[]): Promise<boolean[]>;
   async hasItem(code: unknown) {
     const items = await this.getAllItems();
 

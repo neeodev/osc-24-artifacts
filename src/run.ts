@@ -16,5 +16,5 @@ for (const name of characterNames) {
 
 for (const character of characters) {
   await character.preRun();
-  await character.run();
+  character.run();
 }

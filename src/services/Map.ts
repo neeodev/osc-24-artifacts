@@ -27,18 +27,18 @@ export class Map {
     return this.maps;
   }
 
-  getMapByType(type: string): components["schemas"]["MapSchema"];
-  getMapByType(...types: string[]): components["schemas"]["MapSchema"][];
-  getMapByType(type: unknown) {
-    if (typeof type === "string") {
-      return this.maps.find((map) => map.content?.type === type);
-    } else if (Array.isArray(type)) {
-      return this.maps.filter((map) => type.includes(map.content?.type));
+  getMapByCode(code: string): components["schemas"]["MapSchema"];
+  getMapByCode(codes: string[]): components["schemas"]["MapSchema"][];
+  getMapByCode(code: unknown) {
+    if (typeof code === "string") {
+      return this.maps.find((map) => map.content?.code === code);
+    } else if (Array.isArray(code)) {
+      return this.maps.filter((map) => code.includes(map.content?.code));
     }
   }
 
-  getMapLocationByType(type: string): Location | null {
-    const map = this.getMapByType(type);
+  getMapLocationByCode(code: string): Location | null {
+    const map = this.getMapByCode(code);
 
     if (!map) {
       return null;
